@@ -19,7 +19,9 @@ const Books = () => {
   return (
     <>
       <section>
-        {books && books.map((book) => <Book title={book.title} author={book.author} key={book.id} />)}
+        {books && books.map(
+          (book) => <Book title={book.title} author={book.author} key={book.id} />,
+        )}
       </section>
       <section>
         <BookForm />
