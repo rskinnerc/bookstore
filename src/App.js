@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
 
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Routes>
           <Route index element={<Books />} />
           <Route path="/categories" element={<Categories />} />
