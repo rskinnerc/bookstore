@@ -1,5 +1,5 @@
 const BookForm = () => (
-  <div>
+  <div className="book form">
     <h2>ADD NEW BOOK</h2>
     <form>
       <input type="text" name="title" placeholder="Book title" />
