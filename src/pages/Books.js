@@ -1,26 +1,15 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Book from '../components/Book';
 import BookForm from '../components/BookForm';
 
 const Books = () => {
-  const [books] = useState([
-    {
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-      id: 'ashda9ysudhasd0',
-    },
-    {
-      title: 'Dune',
-      author: 'Frank Herbert',
-      id: 'asdahsd9qhwdoa0a9wq',
-    },
-  ]);
+  const books = useSelector((state) => state.books);
 
   return (
     <>
       <section>
         {books && books.map(
-          (book) => <Book title={book.title} author={book.author} key={book.id} />,
+          (book) => <Book title={book.title} author={book.author} id={book.id} key={book.id} />,
         )}
       </section>
       <section>
