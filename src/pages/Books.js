@@ -9,7 +9,7 @@ const Books = () => {
     <>
       <section>
         {books && books.map(
-          (book) => <Book title={book.title} author={book.author} key={book.id} />,
+          (book) => <Book title={book.title} author={book.author} id={book.id} key={book.id} />,
         )}
       </section>
       <section>

@@ -12,7 +12,7 @@ const BookForm = () => {
     const newBook = {
       author,
       title,
-      id: new Date().getMilliseconds(),
+      id: new Date().getMilliseconds().toString(),
     };
     dispatch(addBook(newBook));
   };
