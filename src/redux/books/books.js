@@ -9,7 +9,7 @@ export default function reducer(state = initialState, action) {
     case BOOKS_LOADED:
       return action.payload;
     case ADD_BOOK:
-      return [...state, action.payload];
+      return [action.payload, ...state];
     case REMOVE_BOOK:
       return [
         ...state.filter((book) => book.id !== action.payload),
@@ -20,9 +20,22 @@ export default function reducer(state = initialState, action) {
 }
 
 export function addBook(book) {
-  return {
-    type: ADD_BOOK,
-    payload: book,
+  return async function addBookAsync(dispatch) {
+    const result = await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/dXhbHW84R2UylfqfKuq7/books', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        item_id: book.id,
+        category: 'Fiction',
+        title: book.title,
+        author: book.author,
+      }),
+    });
+    if (result.ok) {
+      dispatch({ type: ADD_BOOK, payload: book });
+    }
   };
 }
 
