@@ -93,8 +93,17 @@ nav ul {
 }
 
 .books-section,
-.form-section {
+.form-section,
+.categories-section {
   margin: 1.813rem 6.25rem;
+}
+
+.categories-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  justify-content: center;
 }
 
 .book {
