@@ -145,6 +145,7 @@ nav ul {
   border: none;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
 
 .book-actions button:not(:last-child)::after {
@@ -152,6 +153,33 @@ nav ul {
   margin: 0 0.938rem;
   line-height: 1.5rem;
   color: var(--white-two);
+}
+
+.book-progress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.progress-stats {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.313rem;
+}
+
+.percentage {
+  font-family: 'Montserrat', serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--black-two);
+}
+
+.percentage-completed {
+  opacity: 0.5;
+  font-family: 'Montserrat', serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: var(--black-two);
 }
 
 .form {
