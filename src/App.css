@@ -88,10 +88,18 @@ nav ul {
   border: 1px solid var(--white-two);
 }
 
+.books-line {
+  margin: 0 6.25rem;
+}
+
+.books-section,
+.form-section {
+  margin: 1.813rem 6.25rem;
+}
+
 .book {
   display: flex;
   border: 1px solid rgb(221, 221, 221);
-  margin: 1em;
   padding: 1em;
 }
 

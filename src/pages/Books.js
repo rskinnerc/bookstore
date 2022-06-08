@@ -14,7 +14,7 @@ const Books = () => {
 
   return (
     <>
-      <section>
+      <section className="books-section">
         {books && books.map(
           (book) => (
             <Book
@@ -27,7 +27,8 @@ const Books = () => {
           ),
         )}
       </section>
-      <section>
+      <hr className="line books-line" />
+      <section className="form-section">
         <BookForm />
       </section>
     </>
