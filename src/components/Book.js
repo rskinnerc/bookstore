@@ -23,7 +23,7 @@ const Book = ({
         </div>
       </div>
       <div className="book-progress">
-        <CircularProgressBar percent={randomPercentage} linearGradient={['#307bbe', '#379cf6']} size={100} number={false} colorCircle="#c4c4c4" />
+        <CircularProgressBar percent={randomPercentage} linearGradient={['#307bbe', '#379cf6']} size={100} number={false} colorCircle="#f5f6fa" />
         <div className="progress-stats">
           <span className="percentage">
             {randomPercentage}

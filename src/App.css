@@ -204,8 +204,8 @@ nav ul {
 
 .chapter-info {
   border-left: solid 1px var(--white-two);
-  padding-left: 5em;
-  margin-left: -5em;
+  padding-left: 4%;
+  margin-left: -4%;
 }
 
 .update-progress {
