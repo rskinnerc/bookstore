@@ -34,9 +34,9 @@ const Book = ({
 
       </div>
       <div>
-        <h3>CURRENT CHAPTER</h3>
-        <span>Chapter 17</span>
-        <button type="button">UPDATE PROGRESS</button>
+        <h3 className="curent-chapter">CURRENT CHAPTER</h3>
+        <span className="chapter">Chapter 17</span>
+        <button type="button" className="update-progress">UPDATE PROGRESS</button>
       </div>
     </div>
   );
