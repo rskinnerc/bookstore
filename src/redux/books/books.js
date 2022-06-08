@@ -28,7 +28,7 @@ export function addBook(book) {
       },
       body: JSON.stringify({
         item_id: book.id,
-        category: 'Fiction',
+        category: book.category,
         title: book.title,
         author: book.author,
       }),
