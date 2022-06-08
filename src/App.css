@@ -1,3 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'RobotoSlab Bold', serif;
+  src: url(./fonts/RobotoSlab-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'RobotoSlab Light', serif;
+  src: url(./fonts/RobotoSlab-Light.ttf);
+}
+
 nav {
   display: flex;
   align-items: center;
