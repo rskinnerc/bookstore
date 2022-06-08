@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import CircularProgressBar from '@tomik23/react-circular-progress-bar/dist';
+import { CircularProgressBar } from '@tomik23/react-circular-progress-bar/dist';
 import { removeBook } from '../redux/books/books';
 
 const Book = ({
