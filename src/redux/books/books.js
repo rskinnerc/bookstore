@@ -40,9 +40,19 @@ export function addBook(book) {
 }
 
 export function removeBook(id) {
-  return {
-    type: REMOVE_BOOK,
-    payload: id,
+  return async function removeBookAsync(dispatch) {
+    const result = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/dXhbHW84R2UylfqfKuq7/books/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        item_id: id,
+      }),
+    });
+    if (result.ok) {
+      dispatch({ type: REMOVE_BOOK, payload: id });
+    }
   };
 }
 
@@ -61,7 +71,9 @@ export async function loadBooks(dispatch) {
       id: key,
       ...data[key][0],
     }));
-
+    if (books.length === 0) {
+      throw new Error('There are no books.');
+    }
     dispatch(booksLoaded(books));
   } catch (error) {
     dispatch(booksLoaded([]));
