@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
+        <hr className="line" />
         <Routes>
           <Route index element={<Books />} />
           <Route path="/categories" element={<Categories />} />

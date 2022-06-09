@@ -24,16 +24,18 @@ const BookForm = () => {
     };
 
     dispatch(addBook(newBook));
+    setAuthor('');
+    setTitle('');
   };
 
   return (
 
-    <div className="book form">
-      <h2>ADD NEW BOOK</h2>
+    <div className="form">
+      <h2 className="add-book-title">ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Book title" onChange={(e) => setTitle(e.target.value)} required />
-        <input type="text" name="author" placeholder="Author" onChange={(e) => setAuthor(e.target.value)} required />
-        <button type="submit">ADD BOOK</button>
+        <input type="text" name="title" placeholder="Book title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+        <input type="text" name="author" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} required />
+        <button type="submit" className="add-book-btn">ADD BOOK</button>
       </form>
     </div>
   );
