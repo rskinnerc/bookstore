@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { CircularProgressBar } from '@tomik23/react-circular-progress-bar/dist';
+import { Progress } from 'antd';
 import { removeBook } from '../redux/books/books';
 
 const Book = ({
@@ -23,7 +23,16 @@ const Book = ({
         </div>
       </div>
       <div className="book-progress">
-        <CircularProgressBar percent={randomPercentage} linearGradient={['#307bbe', '#379cf6']} size={100} number={false} colorCircle="#f5f6fa" />
+        <Progress
+          strokeColor={{
+            '0%': '#307bbe',
+            '100%': '#379cf6',
+          }}
+          type="circle"
+          percent={randomPercentage}
+          showInfo={false}
+          trailColor="#f5f6fa"
+        />
         <div className="progress-stats">
           <span className="percentage">
             {randomPercentage}
